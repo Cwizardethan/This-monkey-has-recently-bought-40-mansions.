@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n, g;
+
+struct milk{
+    int day;
+    int cow;
+    int chn;
+};
+
+bool cmp(milk a, milk b){
+    return a.day < b.day;
+}
+
+signed main(){
+    cin>>n>>g;
+    vector<milk> a(n);
+    for(int i = 0; i < n; i++){
+        cin>>a[i].day>>a[i].cow>>a[i].chn;
+    }
+    sort(a.begin(), a.end(), cmp);
+    priority_queue<pair<int, int>> cows;
+    map<int, int> mil;
+    mil[a[0].cow] = g + a[0].chn;
+    int ans = 0;
+    cows.push({mil[a[0].cow], a[0].cow});
+    for(int i = 0; i < n; i++){
+        int b = cows.top().second;
+    }
+}
