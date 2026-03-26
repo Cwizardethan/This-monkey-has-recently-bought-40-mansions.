@@ -20,7 +20,7 @@ signed main(){
     wstring_convert<codecvt_utf8<char32_t>, char32_t> conv;
     for(int i = 0; i < n; i++){
         string temp;
-        cin>>temp;
+        getline(cin, temp);
         s[i] = conv.from_bytes(temp);
     }
     for(int i = 0; i < n; i++){
